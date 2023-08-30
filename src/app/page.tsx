@@ -3,20 +3,16 @@ import SearchIcon from "@/components/icons/SearchIcon";
 const Home = () => {
   return (
     <>
-      <form className="flex items-center gap-2 bg-blue-900 p-2 rounded-xl">
-        <span className="h-7 w-7">
-          <SearchIcon
-            className="fill-blue-500"
-            // width={25}
-            // height={25}
-          />
+      <form className="flex flex-wrap items-center gap-2 rounded-xl bg-blue-900 p-2">
+        <span className="min-w-[20px]">
+          <SearchIcon className="fill-blue-500" />
         </span>
         <input
           type="text"
           placeholder="Search GitHub username"
-          className="h-full flex-1"
+          className="h-14 flex-1"
         />
-        <button className="bg-blue-500 rounded-lg py-4 px-4 text-white font-bold">
+        <button className="rounded-lg bg-blue-500 px-4 py-4 font-bold text-white">
           Search
         </button>
       </form>
