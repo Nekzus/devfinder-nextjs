@@ -2,9 +2,9 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
+      <body className={spaceGrotesk.className}>
+        <div className="grid min-h-screen place-content-center bg-gray-500">
+          <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
+            <Navbar />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
