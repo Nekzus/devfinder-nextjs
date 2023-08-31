@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import Navbar from "@/components/Navbar";
+import { Navbar } from "@/components";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 
@@ -18,8 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>
-        <div className="grid min-h-screen place-content-center bg-gray-500">
+      <body
+        suppressHydrationWarning={true}
+        className={spaceGrotesk.className}
+      >
+        <div className="grid min-h-screen place-content-center bg-blue-950">
           <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
             <Navbar />
             {children}
