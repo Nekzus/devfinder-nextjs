@@ -1,10 +1,10 @@
 import "./globals.css";
 
-import { Navbar } from "@/components";
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Navbar } from "@/components";
+import { Roboto_Mono } from "next/font/google";
 
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
+const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={spaceGrotesk.className}
+        className={robotoMono.className}
       >
-        <div className="grid min-h-screen place-content-center bg-blue-950">
+        <div className="grid min-h-screen place-content-center bg-blue-950 p-4">
           <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
             <Navbar />
             {children}
