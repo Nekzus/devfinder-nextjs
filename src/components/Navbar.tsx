@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from "@/components";
 import { useEffect, useState } from "react";
 
 const initialThemeState = () => {
-  if (localStorage.getItem("theme")) {
+  if (localStorage.getItem("theme") && typeof window !== "undefined") {
     return localStorage.getItem("theme") as "light" | "dark";
   } else {
     return window.matchMedia("(prefers-color-scheme: dark)").matches
