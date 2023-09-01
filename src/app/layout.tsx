@@ -21,10 +21,7 @@ export default function RootLayout({
       lang="en"
       className=""
     >
-      <body
-        suppressHydrationWarning={true}
-        className={robotoMono.className}
-      >
+      <body className={robotoMono.className}>
         <div className="grid min-h-screen place-content-center bg-blue-50 p-4 dark:bg-blue-950">
           <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
             <Navbar />
