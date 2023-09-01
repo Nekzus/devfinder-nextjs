@@ -33,7 +33,7 @@ const Navbar = () => {
   }, [theme]);
 
   if (!hasMounted) {
-    return null;
+    return <>Cargando...</>;
   }
 
   const toggleTheme = () => {
