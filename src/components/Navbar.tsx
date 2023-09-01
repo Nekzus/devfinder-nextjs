@@ -16,8 +16,13 @@ const initialThemeState = () => {
 };
 
 const Navbar = () => {
-  const [theme, setTheme] = useState<"light" | "dark">(initialThemeState);
+  const [hasMounted, setHasMounted] = useState(false);
 
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  const [theme, setTheme] = useState<"light" | "dark">(initialThemeState);
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -26,6 +31,10 @@ const Navbar = () => {
     }
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  if (!hasMounted) {
+    return null;
+  }
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
