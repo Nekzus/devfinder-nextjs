@@ -4,13 +4,15 @@ import { MoonIcon, SunIcon } from "@/components";
 import { useEffect, useState } from "react";
 
 const initialThemeState = () => {
-  if (localStorage.getItem("theme") && typeof window !== "undefined") {
+  if (localStorage.getItem("theme")) {
     return localStorage.getItem("theme") as "light" | "dark";
-  } else {
+  }
+  if (typeof window !== "undefined") {
     return window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
   }
+  return "light";
 };
 
 const Navbar = () => {
