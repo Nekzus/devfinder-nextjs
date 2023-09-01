@@ -13,7 +13,7 @@ const FormSeachUsers = ({ getUser }: Props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-6 flex flex-wrap items-center gap-2 rounded-xl bg-blue-900 p-4"
+      className="mb-6 flex flex-wrap items-center gap-2 rounded-xl bg-white p-4 shadow-md dark:bg-blue-900 dark:shadow-none"
     >
       <span className="min-w-[20px]">
         <SearchIcon className="fill-sky-500" />
@@ -22,7 +22,7 @@ const FormSeachUsers = ({ getUser }: Props) => {
         name="username"
         type="text"
         placeholder="Search GitHub username"
-        className="h-14 flex-1 rounded-lg bg-transparent p-2 text-white placeholder:text-white  focus:outline-none focus:ring-2 focus:ring-sky-500"
+        className="h-14 flex-1 rounded-lg bg-transparent p-2 focus:outline-none focus:ring-2  focus:ring-sky-500 dark:text-white dark:placeholder:text-white"
       />
       <button className="rounded-lg bg-sky-500 px-4 py-4 font-bold text-white">
         Search

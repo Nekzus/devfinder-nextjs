@@ -16,7 +16,7 @@ interface Props {
 
 const UserCardInfo = ({ user }: Props) => {
   return (
-    <article className="grid-areas rounded-xl bg-blue-900 p-4 text-white">
+    <article className="grid-areas rounded-xl bg-white p-4 text-blue-950 shadow-md dark:bg-blue-900 dark:text-white dark:shadow-none">
       <div className="section-logo mr-3 grid h-24 w-24 place-content-center overflow-hidden rounded-full bg-gray-200 p-1 lg:mx-auto">
         {user.avatar_url ? (
           <Image
@@ -44,7 +44,7 @@ const UserCardInfo = ({ user }: Props) => {
       <p className="section-description mt-8 leading-loose">
         {user.bio || "Not information"}
       </p>
-      <div className="section-number mt-4 flex justify-around rounded-xl bg-blue-950 p-8 text-center">
+      <div className="section-number mt-4 flex justify-around rounded-xl bg-blue-50 p-8 text-center text-blue-950 dark:bg-blue-950 dark:text-white">
         <article>
           <p>Repos</p>
           <p className="text-xl font-bold">{user.public_repos}</p>
@@ -62,7 +62,7 @@ const UserCardInfo = ({ user }: Props) => {
         <article className="flex space-x-2">
           <i>
             <LocationIcon
-              className="h-full w-full fill-white"
+              className="h-full w-full fill-blue-950 dark:fill-white"
               width={"1rem"}
             />
           </i>
@@ -71,7 +71,7 @@ const UserCardInfo = ({ user }: Props) => {
         <article className="flex space-x-2">
           <i>
             <LinkIcon
-              className="h-full w-full fill-white"
+              className="h-full w-full fill-blue-950 dark:fill-white"
               width={"1rem"}
             />
           </i>
@@ -85,7 +85,7 @@ const UserCardInfo = ({ user }: Props) => {
         <article className="flex space-x-2">
           <i>
             <XIcon
-              className="h-full w-full fill-white"
+              className="h-full w-full fill-blue-950 dark:fill-white"
               width={"1rem"}
             />
           </i>
@@ -96,7 +96,7 @@ const UserCardInfo = ({ user }: Props) => {
         <article className="flex space-x-2">
           <i>
             <BuildingIcon
-              className="h-full w-full fill-white"
+              className="h-full w-full fill-blue-950 dark:fill-white"
               width={"1rem"}
             />
           </i>
