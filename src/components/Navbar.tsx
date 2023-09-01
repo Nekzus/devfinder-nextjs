@@ -7,11 +7,10 @@ const initialThemeState = () => {
   if (typeof window !== "undefined") {
     if (localStorage.getItem("theme")) {
       return localStorage.getItem("theme") as "light" | "dark";
-    } else {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
     }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   }
   return "light";
 };
