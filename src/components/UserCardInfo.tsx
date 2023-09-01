@@ -6,9 +6,9 @@ import {
   XIcon,
 } from "@/components";
 
-import Image from "next/image";
-import { UserModel } from "@/interfaces/UserModel";
 import validateURL from "@/helpers/validateUrl";
+import { UserModel } from "@/interfaces/UserModel";
+import Image from "next/image";
 
 interface Props {
   user: UserModel;
@@ -16,7 +16,7 @@ interface Props {
 
 const UserCardInfo = ({ user }: Props) => {
   return (
-    <article className="grid-areas rounded-xl bg-white p-4 text-blue-950 shadow-md dark:bg-blue-900 dark:text-white dark:shadow-none">
+    <article className="grid-areas rounded-xl bg-white p-4 text-blue-950 shadow-md dark:bg-gray-800 dark:text-white dark:shadow-none">
       <div className="section-logo mr-3 grid h-24 w-24 place-content-center overflow-hidden rounded-full bg-gray-200 p-1 lg:mx-auto">
         {user.avatar_url ? (
           <Image
@@ -44,7 +44,7 @@ const UserCardInfo = ({ user }: Props) => {
       <p className="section-description mt-8 leading-loose">
         {user.bio || "Not information"}
       </p>
-      <div className="section-number mt-4 flex justify-around rounded-xl bg-blue-50 p-8 text-center text-blue-950 dark:bg-blue-950 dark:text-white">
+      <div className="section-number mt-4 flex justify-around rounded-xl bg-blue-50 p-8 text-center text-blue-950 dark:bg-slate-900 dark:text-white">
         <article>
           <p>Repos</p>
           <p className="text-xl font-bold">{user.public_repos}</p>

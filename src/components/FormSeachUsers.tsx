@@ -13,7 +13,7 @@ const FormSeachUsers = ({ getUser }: Props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-6 flex flex-wrap items-center gap-2 rounded-xl bg-white p-4 shadow-md dark:bg-blue-900 dark:shadow-none"
+      className="mb-6 flex flex-wrap items-center gap-2 rounded-xl bg-white p-4 shadow-md dark:bg-gray-800 dark:shadow-none"
     >
       <span className="min-w-[20px]">
         <SearchIcon className="fill-sky-500" />
