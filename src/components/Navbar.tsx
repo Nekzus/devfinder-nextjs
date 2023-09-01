@@ -22,7 +22,7 @@ const Navbar = () => {
     setHasMounted(true);
   }, []);
 
-  const [theme, setTheme] = useState<"light" | "dark">(initialThemeState);
+  const [theme, setTheme] = useState<"light" | "dark">(initialThemeState());
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
